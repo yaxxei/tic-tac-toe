@@ -20,7 +20,7 @@ interface NotFinished {
 
 interface Finished {
   isFinish: true;
-  winner: Exclude<ISymbol, "">;
+  winner: ISymbol;
 }
 
 export type GameState = NotFinished | Finished;
@@ -102,8 +102,11 @@ export class GameStore {
       const winner = this.getMover() === "cross" ? "zero" : "cross";
       this.gameState = { isFinish: true, winner };
       this.incrementScore(winner);
+      return true;
+    } else if (this.grid.flat().every((c) => c.symbol.length)) {
+      this.gameState = { isFinish: true, winner: "" };
+      return true;
     }
-
-    return isWin;
+    return false;
   }
 }

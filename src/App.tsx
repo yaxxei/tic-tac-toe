@@ -21,10 +21,7 @@ const App = observer(() => {
   return (
     <>
       {gameStore.gameState.isFinish && (
-        <Replay
-          winner={gameStore.getMover() === "cross" ? "zero" : "cross"}
-          restart={restartHandler}
-        />
+        <Replay winner={gameStore.gameState.winner} restart={restartHandler} />
       )}
       <div
         id="container"
