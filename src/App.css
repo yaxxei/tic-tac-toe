@@ -1,0 +1,10 @@
+#container {
+  position: relative;
+  transition: background-color 0.2s ease, filter 0.2s ease;
+}
+
+#container.dimmed {
+  background-color: rgba(0, 0, 0, 0.7);
+  filter: blur(5px) brightness(30%);
+  pointer-events: none;
+}

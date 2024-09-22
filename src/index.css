@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #212121;
+  --cell-color: #323232;
+  --win-cell-color: rgb(0, 190, 48);
+  --symbols-size: 200px;
+  --header-height: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Lexend", system-ui;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}

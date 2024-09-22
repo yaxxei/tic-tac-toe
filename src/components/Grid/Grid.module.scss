@@ -1,0 +1,12 @@
+.grid {
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  border-collapse: collapse;
+
+  td {
+    padding: 0;
+    border: 1px solid #000;
+    height: 50px;
+    width: 50px;
+  }
+}

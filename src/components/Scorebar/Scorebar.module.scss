@@ -1,0 +1,57 @@
+.scorebar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: var(--header-height);
+  // border-bottom: 1px solid #fff;
+  // box-shadow: 0 2px 5px #fff;
+
+  .cross {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &::before, &::after {
+      content: "";
+      background-color: red;
+      width: calc(40px / 10);
+      height: 40px;
+      position: absolute;
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  .zero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &::before {
+      content: "";
+      background-color: red;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+    }
+  
+    &::after {
+      content: "";
+      background-color: var(--bg-color);
+      width: calc(40px / 1.2);
+      height: calc(40px / 1.2);
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+}
